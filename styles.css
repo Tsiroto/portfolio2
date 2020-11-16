@@ -4,6 +4,33 @@ body {
   font-size: 15px;
 }
 
+html {
+  -webkit-animation: entry 1.5s ease;
+          animation: entry 1.5s ease;
+}
+
+@-webkit-keyframes entry {
+  0% {
+    -webkit-filter: brightness(0);
+            filter: brightness(0);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+
+@keyframes entry {
+  0% {
+    -webkit-filter: brightness(0);
+            filter: brightness(0);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -121,11 +148,11 @@ nav ul li a:hover {
   -webkit-box-reflect: below 0 linear-gradient(transparent, transparent);
 }
 
-.logo > div:first-child {
+.logo div:first-child {
   margin-bottom: -7px;
 }
 
-.logo > div:last-child {
+.logo div:last-child {
   font-weight: 500;
   margin-bottom: 3px;
 }
