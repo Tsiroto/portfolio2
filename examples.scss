@@ -1,0 +1,260 @@
+.gaming {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  // background: #e6e7ee;
+  background: linear-gradient(90deg, #bf0a0a 48%, #e6de00 62%), #fff700;
+  border: 1px solid #d1d9e6;
+  border-radius: 9px;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.few-words {
+  margin: 30px 0;
+  padding: 20px;
+  > h2 {
+    font-weight: 400;
+    color: #fff;
+  }
+  > p {
+    color: #d8d8d8;
+  }
+}
+
+  // CONTROLLER CARD
+
+$blueGradient: linear-gradient(176deg, #3D9DEA, #4A4EEE);
+$blackGradient: linear-gradient(45deg, #343A4F, #0F1620);
+$lightblue: #3D9DEA;
+$darkblue: #4A4EEE;
+$gray: #D5E1EF;
+$darkblue: #3235a0;
+$beige: #f5f5dc;
+
+.gaming__card {
+  font-family: 'Segoe UI', sans-serif;
+  width: 450px;
+  margin: 20px 0;
+  border-radius: 40px;
+  box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+  overflow: hidden;
+  .overviewInfo {
+    background: $beige;
+    padding: 24px;
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      .backbutton {
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+      .cartbutton {
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-image: linear-gradient(90deg, #489be2, #0f629c);
+          border-radius: 50%;
+          position: absolute;
+          top: 11px;
+          right: 8px;
+        }
+        svg {
+        color: #ababab;
+        }
+      }
+      .neurobutton {
+        background: $beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255,255,255,0.1), 2px 2px 6px 3px rgba(0,0,0,0.4);
+      }
+      .backbutton, .cartbutton{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        &:hover {
+        cursor: pointer;
+      }
+      }
+    }
+    .productinfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      min-height: 200px;
+      margin-bottom: 50px;
+      // &:hover .productImage {
+      //   transition: ease 1.2s all ;
+      //   animation: none;
+      //   transform: rotate(0deg) translate(-6px, 60px);
+      // }
+    }
+    .grouptext {
+      h3 {
+        letter-spacing: 3.2px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 12px;
+        opacity: 0.8;
+      } 
+    }
+    .productImage {
+      position: absolute;
+      max-width: 320px;
+      margin-left: 24%;
+      right: -35px;
+      height: auto;
+      transition: ease 1.2s all ;
+      transform: rotate(-45deg) translate(-46px, 46px);
+      animation: updowncontroller ease-in-out 2.4s infinite alternate;
+      img {
+        width: 100%;
+        height: auto
+        }
+    }
+  }
+  .productSpecifications {
+    background-image: linear-gradient(86deg, #3890d6 5%, #4A4EEE);
+    padding: 24px;
+    color: $beige;
+    h1 {
+      margin: 10px 0;
+      font-size: 32px;
+      font-family: 'Michroma', sans-serif;
+    }
+    > p {
+      opacity: 0.9;
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+    }
+    .productFeatures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px; 
+      grid-row-gap: 16px;
+      .feature {
+        display: flex;
+        align-items: center;
+        width: 120px;
+        margin: auto;
+        .featureIcon{
+          width: 16px;
+          height: 16px;
+          background: $beige;
+          border-radius: 50%; 
+          margin-right: 16px;
+        }
+        .featureText {
+          p:first-child {
+            font-size: 16px;
+            font-weight: 400;
+          }
+          p {
+            color: $beige;
+            font-size: 14px;
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+    .checkoutButton {
+      display: flex;
+      width: 100%;
+      background: #ffffff26;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+      margin-top: 30px;
+      padding: 14px;
+      justify-content: space-between;
+      align-items: center;
+      .priceTag {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+      }
+      button.buy {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+        outline: 0;
+        border: 0;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background-image: linear-gradient(85deg, #61c7ef, #4535ca);
+        box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+        &:hover {
+          cursor: pointer;
+        }
+        p {
+          padding: 8px 17px;
+          margin: 0;
+          border-right: 1px solid rgba(0,0,0,0.4);
+        }
+        .buttonaction {
+            border-left: 1px solid rgba(255,255,255,.2);
+            padding: 5px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes updowncontroller {
+  0%  {
+    transform: rotate(-45deg) translate(-46px, 46px);
+  }
+  100% {
+    transform: rotate(0deg) translate(-6px, 60px);
+  }
+}
+
+// ADMIN PANEL PREVIEW
+
+.panel_example {
+  margin: 60px auto;
+  > h2 {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+.panels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #2bbfbf42;
+  img {
+    margin: 20px 40px;
+  }
+}

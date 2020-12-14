@@ -121,11 +121,11 @@ nav {
   -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   padding: 0px 5%;
-  z-index: 2;
   position: fixed;
   width: 100%;
   width: -moz-available;
   width: -webkit-fill-available;
+  z-index: 99;
 }
 
 nav ul {
@@ -399,12 +399,15 @@ nav ul li a:hover {
   letter-spacing: 1px;
   color: #002157;
   font-size: 60px;
+  margin: 0;
 }
 
 .text-container p:nth-child(2) {
   color: #5e5c5c;
   font-size: 30px;
+  margin-top: 0px;
   margin-bottom: 16px;
+  padding-left: 3px;
 }
 
 .text-container button {
@@ -420,9 +423,9 @@ nav ul li a:hover {
 .text-container {
   position: absolute;
   left: 13%;
-  top: 42%;
-  -webkit-transform: translate(-13%, -42%);
-          transform: translate(-13%, -42%);
+  top: 40%;
+  -webkit-transform: translate(-13%, -40%);
+          transform: translate(-13%, -40%);
 }
 
 .hire-btn {
@@ -521,13 +524,18 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+hr {
+  border: 1px solid #7ba4af36;
+  width: 75%;
+  margin: auto;
+}
+
 .examplols {
   width: 80%;
   margin: 50px auto;
 }
 
 .examplols > h2 {
-  color: #002157;
   font-weight: 500;
   font-size: 30px;
 }
@@ -597,286 +605,8 @@ nav ul li a:hover {
           transform: translateY(30px) scale(0.9);
 }
 
-.responsive__example {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 400px;
-  background: #eccbcb82;
-  border: 1px solid #dadada;
-  border-radius: 5px;
-}
-
-.responsive__example div {
-  margin: 0 40px;
-}
-
-.responsive__example div:first-child {
-  max-width: 320px;
-  height: 70%;
-  border-radius: 15px;
-  padding: 10px 20px;
-  color: #fff;
-  background: #d55084;
-}
-
-.responsive__example div:first-child h3 {
-  text-align: center;
-}
-
-.responsive__example div:first-child p {
-  text-align: justify;
-}
-
-.responsive__example section {
-  position: relative;
-  width: 140px;
-  height: 250px;
-  background-color: #efeff3;
-  -webkit-animation: window forwards 6s infinite;
-          animation: window forwards 6s infinite;
-  overflow: hidden;
-}
-
-.responsive__example section > * {
-  position: absolute;
-}
-
-.responsive__example header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  border-top: 7px solid #3c3e99;
-  background-color: #4c54a4;
-  -webkit-animation: header forwards 6s infinite;
-          animation: header forwards 6s infinite;
-}
-
-.responsive__example article {
-  top: 30px;
-  left: 50%;
-  width: 140px;
-  height: 220px;
-  -webkit-box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-          box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-  background-color: #fff;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-animation: article forwards 6s infinite;
-          animation: article forwards 6s infinite;
-}
-
-.responsive__example article::after {
-  position: absolute;
-  top: 100%;
-  margin-top: 15px;
-  width: 100%;
-  height: 100px;
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-          box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-  content: "";
-}
-
-.responsive__example button {
-  position: absolute;
-  right: 10px;
-  top: 220px;
-  margin: 0;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-  border: 0;
-  border-radius: 100%;
-  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4), 0 2px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4), 0 2px 3px rgba(0, 0, 0, 0.2);
-  -webkit-appearance: none;
-  background-color: #e20269;
-  -webkit-animation: button forwards 6s infinite;
-          animation: button forwards 6s infinite;
-}
-
-@-webkit-keyframes window {
-  0%,
-  15%,
-  90% {
-    width: 140px;
-    height: 250px;
-  }
-  30%,
-  45% {
-    width: 400px;
-    height: 300px;
-  }
-  60%,
-  75% {
-    width: 560px;
-    height: 370px;
-  }
-}
-
-@keyframes window {
-  0%,
-  15%,
-  90% {
-    width: 140px;
-    height: 250px;
-  }
-  30%,
-  45% {
-    width: 400px;
-    height: 300px;
-  }
-  60%,
-  75% {
-    width: 560px;
-    height: 370px;
-  }
-}
-
-@-webkit-keyframes header {
-  0%,
-  15%,
-  90% {
-    width: 100%;
-    height: 30px;
-    border-top-width: 7px;
-  }
-  30%,
-  45% {
-    height: 90px;
-    border-top-width: 12px;
-  }
-  60%,
-  75% {
-    height: 105px;
-    border-top-width: 14px;
-  }
-}
-
-@keyframes header {
-  0%,
-  15%,
-  90% {
-    width: 100%;
-    height: 30px;
-    border-top-width: 7px;
-  }
-  30%,
-  45% {
-    height: 90px;
-    border-top-width: 12px;
-  }
-  60%,
-  75% {
-    height: 105px;
-    border-top-width: 14px;
-  }
-}
-
-@-webkit-keyframes article {
-  0%,
-  15%,
-  90% {
-    top: #4c54a4;
-    width: 140px;
-    height: 220px;
-  }
-  30%,
-  45% {
-    top: 35px;
-    width: 270px;
-    height: 220px;
-  }
-  60%,
-  75% {
-    top: 35px;
-    width: 290px;
-    height: 225px;
-  }
-}
-
-@keyframes article {
-  0%,
-  15%,
-  90% {
-    top: #4c54a4;
-    width: 140px;
-    height: 220px;
-  }
-  30%,
-  45% {
-    top: 35px;
-    width: 270px;
-    height: 220px;
-  }
-  60%,
-  75% {
-    top: 35px;
-    width: 290px;
-    height: 225px;
-  }
-}
-
-@-webkit-keyframes button {
-  0%,
-  15%,
-  90% {
-    right: 10px;
-    top: 220px;
-    width: 20px;
-    height: 20px;
-  }
-  30%,
-  45% {
-    right: 20px;
-    top: 77px;
-    width: 26px;
-    height: 26px;
-  }
-  60%,
-  75% {
-    right: 25px;
-    top: 92px;
-    width: 26px;
-    height: 26px;
-  }
-}
-
-@keyframes button {
-  0%,
-  15%,
-  90% {
-    right: 10px;
-    top: 220px;
-    width: 20px;
-    height: 20px;
-  }
-  30%,
-  45% {
-    right: 20px;
-    top: 77px;
-    width: 26px;
-    height: 26px;
-  }
-  60%,
-  75% {
-    right: 25px;
-    top: 92px;
-    width: 26px;
-    height: 26px;
-  }
-}
-
 .services {
-  height: 600px;
+  margin-bottom: 40px;
   background-color: #ffffff;
   padding: 2% 10% 0px 10%;
 }
@@ -1157,18 +887,19 @@ services-text p:nth-child(3) {
   font-weight: 500;
 }
 
-footer p:nth-child(1) {
+footer h2 {
   font-size: 30px;
-  font-weight: bold;
-  color: #191919;
-  margin-bottom: 10px;
+  color: #292929;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
 
-footer p:nth-child(2) {
+footer p {
   font-size: 16px;
   color: #464646;
   width: 600px;
   text-align: center;
+  margin: 0;
 }
 
 footer {

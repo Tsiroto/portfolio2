@@ -46,8 +46,10 @@ body :-ms-input-placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
-  height: 400px;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -71,20 +73,52 @@ body :-ms-input-placeholder {
 }
 
 .wrapper.form-success .container h1 {
-  -webkit-transform: translateY(85px);
-          transform: translateY(85px);
+  -webkit-animation: formTitle 4.2s;
+          animation: formTitle 4.2s;
+}
+
+@-webkit-keyframes formTitle {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes formTitle {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 340px;
   padding: 30px;
   text-align: center;
   border-radius: 5px;
   border: 1px solid #ffffff59;
   -webkit-box-shadow: 1px 1px 18px 1px #868686a8;
           box-shadow: 1px 1px 18px 1px #868686a8;
-  z-index: 2;
+}
+
+.cont__back {
+  background: #ffffff33;
 }
 
 .container h1 {

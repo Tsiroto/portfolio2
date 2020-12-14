@@ -88,11 +88,11 @@ nav {
 	background-color :#ffffff;
 	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 	padding: 0px 5%;
-	z-index: 2;
 	position: fixed;
 	width: 100%;
 	width: -moz-available;
 	width: -webkit-fill-available;
+	z-index: 99;
 }
 nav ul{
 	display: flex;
@@ -339,12 +339,15 @@ nav ul li a {
 	letter-spacing: 1px;
 	color: #002157;
 	font-size: 60px;
+	margin: 0;
 	
 }
 .text-container p:nth-child(2) {
 	color: #5e5c5c;
 	font-size: 30px;
+	margin-top: 0px;
 	margin-bottom: 16px;
+	padding-left: 3px;
 }
  
 .text-container button {
@@ -359,8 +362,8 @@ nav ul li a {
 .text-container {
 	position: absolute;
 	left: 13%;
-	top: 42%;
-	transform: translate(-13%,-42%);
+	top: 40%;
+	transform: translate(-13%,-40%);
 }
 .hire-btn {
 	border: 2px solid #373636;
@@ -439,11 +442,17 @@ nav ul li a {
 	border-radius: 5px;
 }
 
+hr {
+	border: 1px solid #7ba4af36;
+	width: 75%;
+	margin: auto;
+}
+
 .examplols {
 	width: 80%;
 	margin: 50px auto;
 	>h2 {
-		color: #002157;
+		// color: #002157;
 		font-weight: 500;
 		font-size: 30px;
 	}
@@ -493,195 +502,8 @@ nav ul li a {
 	}
 }
 
-// Variables for the responsive example
-$animation-duration: 6s;
-
-$background-color: #d55084;
-$window-top: #3c3e99;
-$window-bar: #4c54a4;
-$window-content: #fff;
-$window-background: #efeff3;
-$button-color: #e20269;
-
-$window-width: 140px, 400px, 560px;
-$window-height: 250px, 300px, 370px;
-$content-width: 140px, 270px, 290px;
-$content-height: 220px, 220px, 225px;
-$header-height: 30px, 90px, 105px;
-$header-border: 7px, 12px, 14px;
-$button-size: 20px, 26px, 26px;
-
-
-.responsive__example {
-	display: flex;
-  justify-content: space-between;
-	align-items: center;
-	height: 400px;
-	// background-image: url(images/backgra3.jpg);
-	background: #eccbcb82;
-	border: 1px solid #dadada;
-	border-radius: 5px;
-	div {
-		margin: 0 40px;
-	}
-	div:first-child {
-		max-width: 320px;
-    height: 70%;
-    border-radius: 15px;
-    padding: 10px 20px;
-		color: #fff;
-		background: $background-color;
-		h3 {
-			text-align: center;
-		}
-		p {
-			text-align: justify;
-		}
-	}
-	section {
-		position: relative;
-		width: nth($window-width, 1);
-		height: nth($window-height, 1);
-		background-color: $window-background;
-		animation: window forwards $animation-duration infinite;
-		overflow: hidden;
-
-		> * {
-			position: absolute;
-		}
-	}
-	header {
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: nth($header-height, 1);
-		border-top: nth($header-border, 1) solid $window-top;
-		background-color: $window-bar;
-		animation: header forwards $animation-duration infinite;
-	}
-	article {
-		top: 30px;
-		left: 50%;
-		width: nth($content-width, 1);
-		height: nth($content-height, 1);
-		box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-		background-color: $window-content;
-		transform: translateX(-50%);
-		animation: article forwards $animation-duration infinite;
-		&::after {
-			position: absolute;
-			top: 100%;
-			margin-top: 15px;
-			width: 100%;
-			height: 100px; // 30px on small, 95px on large
-			background-color: $window-content;
-			box-shadow: 0 2px 4px rgba(100, 100, 100, 0.1);
-			content: "";
-		}
-	}
-	button {
-		position: absolute;
-		right: 10px;
-		top: (nth($window-height, 1) - 20px * 1.5);
-		margin: 0;
-		padding: 0;
-		width: 20px;
-		height: 20px;
-		border: 0;
-		border-radius: 100%;
-		box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4), 0 2px 3px rgba(0, 0, 0, 0.2);
-		-webkit-appearance: none;
-		background-color: $button-color;
-		animation: button forwards $animation-duration infinite;
-	}
-	@keyframes window {
-		0%,
-		15%,
-		90% {
-			width: nth($window-width, 1);
-			height: nth($window-height, 1);
-		}
-		30%,
-		45% {
-			width: nth($window-width, 2);
-			height: nth($window-height, 2);
-		}
-		60%,
-		75% {
-			width: nth($window-width, 3);
-			height: nth($window-height, 3);
-		}
-	}
-	@keyframes header {
-		0%,
-		15%,
-		90% {
-			width: 100%;
-			height: nth($header-height, 1);
-			border-top-width: nth($header-border, 1);
-		}
-
-		30%,
-		45% {
-			height: nth($header-height, 2);
-			border-top-width: nth($header-border, 2);
-		}
-		60%,
-		75% {
-			height: nth($header-height, 3);
-			border-top-width: nth($header-border, 3);
-		}
-	}
-	@keyframes article {
-		0%,
-		15%,
-		90% {
-			top: $window-bar;
-			width: nth($content-width, 1);
-			height: nth($content-height, 1);
-		}
-		30%,
-		45% {
-			top: 35px;
-			width: nth($content-width, 2);
-			height: nth($content-height, 2);
-		}
-		60%,
-		75% {
-			top: 35px;
-			width: nth($content-width, 3);
-			height: nth($content-height, 3);
-		}
-	}
-	@keyframes button {
-		0%,
-		15%,
-		90% {
-			right: 10px;
-			top: (nth($window-height, 1) - 20px * 1.5);
-			width: nth($button-size, 1);
-			height: nth($button-size, 1);
-		}
-		30%,
-		45% {
-			right: 20px;
-			top: (nth($header-height, 2) - 26px * 0.5);
-			width: nth($button-size, 2);
-			height: nth($button-size, 2);
-		}
-		60%,
-		75% {
-			right: 25px;
-			top: (nth($header-height, 3) - 26px * 0.5);
-			width: nth($button-size, 3);
-			height: nth($button-size, 3);
-		}
-	}
-}
-
-
 .services {
-	height: 600px;
+	margin-bottom: 40px;
 	background-color:#ffffff;
 	padding: 2% 10% 0px 10%;
 }
@@ -877,17 +699,18 @@ services-text p:nth-child(3) {
   font-weight: 500;
 }
 
-footer p:nth-child(1) {
+footer h2 {
 	font-size: 30px;
-	font-weight: bold;
-	color:#191919;
-	margin-bottom: 10px;
+	color:#292929;
+	margin-top: 18px;
+	margin-bottom: 0;
 }
-footer p:nth-child(2) {
+footer p {
 	font-size: 16px;
 	color: #464646;
 	width: 600px;
 	text-align: center;
+	margin: 0;
 }
 footer {
 	display: flex;
@@ -1087,7 +910,6 @@ footer {
 		align-items: center;
 		z-index: 3;
 		display: none;
-		
 	}
 	nav ul li {
 		padding: 10px;
