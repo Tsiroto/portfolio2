@@ -10,12 +10,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(48%, #bf0a0a), color-stop(62%, #e6de00)), #fff700;
-  background: linear-gradient(90deg, #bf0a0a 48%, #e6de00 62%), #fff700;
-  border: 1px solid #d1d9e6;
+  background: -webkit-gradient(linear, left top, right top, color-stop(48%, #bf0a0a), color-stop(62%, #fcee09)), #fff700;
+  background: linear-gradient(90deg, #bf0a0a 48%, #fcee09 62%), #fff700;
+  background: #e6de00;
   border-radius: 9px;
-  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-          box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  -webkit-box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 4px 2px #0c0c0c4d, inset 0px 0px 60px 1px #909090, inset 0px 0px 19px 9px #fff700, inset 0px 0px 6px 2px #fff;
+          box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 4px 2px #0c0c0c4d, inset 0px 0px 60px 1px #909090, inset 0px 0px 19px 9px #fff700, inset 0px 0px 6px 2px #fff;
 }
 
 .left-side {
@@ -32,6 +32,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .few-words {
@@ -41,11 +42,11 @@
 
 .few-words > h2 {
   font-weight: 400;
-  color: #fff;
+  color: #00000f;
 }
 
 .few-words > p {
-  color: #d8d8d8;
+  color: #00000f;
 }
 
 .gaming__card {
@@ -354,6 +355,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: #2bbfbf42;
 }
 
